@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flickr Slutprojekt</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="label">Sök Flickr Bilder!</h2>
+        <form class="form">
+            <div>
+            <input id="sök" type="text" placeholder="Sök flickr">
+            <input id="number" type="number" placeholder="0">
+            </div>
+            <div class="checkbox">
+            <label for="">Small</label>
+            <input type="checkbox" id="small">
+            <label for="">Medium</label>
+            <input type="checkbox" id="medium">
+            <label for="">Large</label>
+            <input type="checkbox" id="large">
+            </div>
+            <div class="sort">
+            <input id="sorting" list="sortings" name="myBrowser" placeholder="Select"/></label>
+      <datalist id="sortings">
+        <option value="Date"></option>
+        <option value="Interestingness"></option>
+        <option value="Relevance"></option>
+      </datalist>
+        </div>
+        <button id="btn">Sök</button>
+        <div id="fotoShow">
+        </div>
+        <div id="error1"></div>
+        <div id="error2"></div>
+        <div id="boxes">
+            <div class="box"></div>
+        </div>
+        </form>
+       
+
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

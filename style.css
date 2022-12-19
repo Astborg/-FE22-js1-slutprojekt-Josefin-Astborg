@@ -1,0 +1,55 @@
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.container{
+    
+    text-align: center; 
+    border: 2px solid rgb(232, 229, 229); 
+    padding: 50px; 
+  
+}
+.container:hover{
+    border-color: rgb(255, 158, 101);
+}
+input{
+    border-radius: 5px; 
+    border: 2px solid rgb(232, 229, 229);
+}
+input:hover{
+    border-color: rgb(255, 158, 101);
+}
+input:focus{
+    border-color: rgb(255, 158, 101);
+    outline: none; 
+}
+
+.checkbox{
+    margin: 15px; 
+}
+
+.sort{
+    margin: 20px; 
+}
+#fotoshow{
+    display: flex; 
+    flex-wrap: wrap; 
+    padding: 120px; 
+}
+
+#btn{
+    background-color: rgb(255, 158, 101);
+    border:none; 
+    border-radius: 5px; 
+    padding: 10px; 
+    width: 100px; 
+    margin: 20px; 
+    cursor: pointer; 
+}
+
+/* animation  */
+#boxes {
+    text-align: center;
+}
+
+
