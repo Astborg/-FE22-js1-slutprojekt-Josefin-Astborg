@@ -44,8 +44,8 @@ function searchFlickr(){
     textAlign: 'center',
     backgroundColor: 'hsl(200, 50%, 50%)',
     translateY: [
-        {value: 200, duration: 500},
-        {value:0, duration: 800}
+        {value: 200, duration: 1000},
+        {value:0, duration: 2000}
     ],
     loop: false,
     rotate: {
