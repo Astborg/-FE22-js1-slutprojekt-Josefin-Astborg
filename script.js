@@ -6,6 +6,7 @@ const btn = document.getElementById('btn')
 const fotoShow = document.getElementById('fotoShow')
 const error1 = document.getElementById('error1')
 const error2 = document.getElementById('error2')
+const error3 = document.getElementById('error3')
 
 
 btn.addEventListener('click', (e) =>{
@@ -58,22 +59,30 @@ function searchFlickr(){
     });
     animation.play();
 
+    
     //fetch data from Flickr
     fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=e7e5f667179d941ec293b818e86940f6&text=${searchF}&per_page=${howMany}&sort=${sortingValue}&format=json&nojsoncallback=1`)
     .then((response) => response.json())
     .then ((data) => {
     console.log(data)
+    if (data.photos.pages === 0) {
+        error3.innerHTML = 'No photos for this search!';
+      }
     data.photos.photo.forEach((phot) => {
     fotoShow.innerHTML += `<img src="https://live.staticflickr.com/${phot.server}/${phot.id}_${phot.secret}_${checkbox}.jpg"/>`
 
     })
+
 })
-     .catch((error) => {
+    .catch((error) => {
     error2.innerHTML = `<p>You have forgotten to fill in all values</p>`
     console.log(error)
     })
 
 
+    
+    
+   
     //checkboxes sizes
     if (small.checked){
         checkbox = 'm'
