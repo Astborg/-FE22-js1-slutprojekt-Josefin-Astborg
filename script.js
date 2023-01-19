@@ -22,7 +22,11 @@ function searchFlickr(){
     const howMany = document.getElementById('number').value
     let sortingValue = '';
     let checkbox = '';
-
+    
+    if (howMany === "") {
+        error3.innerHTML = `You must enter a number to continue.`;
+        return;
+      }
     //selecting
     if (sorting === "Date") {
         sortingValue = "date-posted-asc";
@@ -95,6 +99,7 @@ function searchFlickr(){
         error1.innerHTML = ''
     } else{
     error1.innerHTML = `<p>You have forgotten to choose size</p>`
+    error3.innerHTML += ''; 
        console.log(error1)
     }
 
