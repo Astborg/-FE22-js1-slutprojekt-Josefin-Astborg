@@ -109,6 +109,7 @@ function searchFlickr(){
 function removeItems(){
     fotoShow.innerHTML = ''
     error2.innerHTML = ''
+    error3.innerHtml = ''
     
 }
 
