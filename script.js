@@ -10,9 +10,10 @@ const error3 = document.getElementById('error3')
 
 
 btn.addEventListener('click', (e) =>{
-    searchFlickr()
-    e.preventDefault()
-    removeItems() 
+    removeItems();
+    searchFlickr();
+    e.preventDefault();
+    
 })
 
 
@@ -74,12 +75,12 @@ function searchFlickr(){
       }
     data.photos.photo.forEach((phot) => {
     fotoShow.innerHTML += `<img src="https://live.staticflickr.com/${phot.server}/${phot.id}_${phot.secret}_${checkbox}.jpg"/>`
-
+        
     })
-
+    error3.innerHTML = ''
 })
     .catch((error) => {
-    error2.innerHTML = `<p>You have forgotten to fill in all values</p>`
+    error2.innerHTML = `<p>error!</p>`
     console.log(error)
     })
 
@@ -99,7 +100,6 @@ function searchFlickr(){
         error1.innerHTML = ''
     } else{
     error1.innerHTML = `<p>You have forgotten to choose size</p>`
-    error3.innerHTML += ''; 
        console.log(error1)
     }
 
@@ -107,9 +107,9 @@ function searchFlickr(){
 
     
 function removeItems(){
-    fotoShow.innerHTML = ''
-    error2.innerHTML = ''
-    error3.innerHtml = ''
+    fotoShow.innerHTML = '';
+    error2.innerHTML = '';
+    error3.innerHTML = '';
     
 }
 
