@@ -22,9 +22,9 @@ function searchFlickr(){
     const howMany = document.getElementById('number').value
     let sortingValue = '';
     let checkbox = '';
-    
+
     if (howMany === "") {
-        error3.innerHTML = `You must enter a number to continue.`;
+        error3.innerHTML = `You must fill in all values.`;
         return;
       }
     //selecting
