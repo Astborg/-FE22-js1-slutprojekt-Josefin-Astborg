@@ -77,7 +77,6 @@ function searchFlickr(){
     fotoShow.innerHTML += `<img src="https://live.staticflickr.com/${phot.server}/${phot.id}_${phot.secret}_${checkbox}.jpg"/>`
         
     })
-    error3.innerHTML = ''
 })
     .catch((error) => {
     error2.innerHTML = `<p>error!</p>`
